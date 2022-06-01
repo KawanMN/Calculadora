@@ -1,6 +1,7 @@
 /* Kawan Novaes*/
 
 import 'dart:io';
+import 'dart:core';
 
 void main(List<String> arguments) {
   var operacao;
@@ -13,7 +14,13 @@ void main(List<String> arguments) {
   stdout.writeln('Digite (-) para Subtração.');
   stdout.writeln('Digite (/) para Divisão.');
   stdout.writeln('Digite (*) para Multiplicação.');
+  stdout.writeln('Digite (q) para Sair.');
   operacao = stdin.readLineSync();
+
+  if(operacao == 'q'){
+    print("Bye");
+    return;
+  }
 
   if (operacao == '+' ||
       operacao == '-' ||
